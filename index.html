@@ -1,0 +1,473 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L&D Exceptional Taxes, LLC — Making your numbers make cents!!</title>
+  <meta name="description" content="Fast, accurate tax preparation for W-2 and self-employed clients. Up to $7,000 advance loans if you qualify. Serving Albany, GA." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="L&D Exceptional Taxes, LLC — Tax Prep in Albany, GA">
+  <meta property="og:description" content="W-2s, self-employed, small business. Up to $7,000 advance loans if you qualify.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../images/lashandapic.jpg">
+  <meta property="og:url" content="https://ldexceptionaltaxes.com/">
+
+  <!-- Favicon (uses the inline SVG logo as a data URL for broad support) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23E10612'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3EL%26D%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b0b0b;
+      --muted:#6b6b6b;
+      --brand:#111111; /* black */
+      --accent:#e10612; /* tax red */
+      --alt:#f7f7f8;
+      --border:#e4e6eb;
+      --radius:14px;
+      --shadow:0 8px 26px rgba(0,0,0,.08);
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text); background:var(--bg); line-height:1.6;
+    }
+    img{ max-width:100%; height:auto; display:block; }
+    .container{ width:min(1100px, 92%); margin-inline:auto; }
+    .accent{ color:var(--accent); }
+    .skip-link{ position:absolute; left:-9999px; }
+    .skip-link:focus{ left:1rem; top:1rem; background:#fff; padding:.5rem .75rem; z-index:1000; }
+
+    .site-header{
+      position:sticky; top:0; z-index:50; background:#ffffffd9; backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .header-inner{ display:flex; align-items:center; justify-content:space-between; padding:.8rem 0; }
+    .brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--brand); font-weight:800; }
+    .brand .logo{ width:44px; height:44px; border-radius:8px; overflow:hidden; display:block; }
+    .nav__toggle{ display:none; }
+    .nav__list{ display:flex; gap:1rem; list-style:none; margin:0; padding:0; }
+    .nav__list a{ text-decoration:none; color:var(--text); font-weight:700; }
+    .nav__list a:hover{ color:var(--accent); }
+
+    .hero{
+      padding: clamp(2rem, 7vw, 5rem) 0;
+      border-bottom:1px solid var(--border);
+    }
+    .hero--contrast{
+      background: linear-gradient(160deg, #111 0%, #1b1b1b 50%, #191919 100%);
+      color:#fff;
+    }
+    .hero--contrast .btn{ border-color:#fff; background:var(--accent); }
+    .hero--contrast .btn--ghost{ background:transparent; color:#fff; border-color:#fff; }
+    .hero__grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem; align-items:center; }
+    .hero__copy p{ color:#e7e7e7; margin:0 0 1rem; }
+    .hero__badges{ display:flex; gap:1rem; padding:0; margin:1rem 0 0; list-style:none; color:#ddd; }
+
+    h1,h2,h3{ line-height:1.2; margin:.2rem 0 .6rem; }
+    .section{ padding: clamp(2rem, 6vw, 4rem) 0; }
+    .section--alt{ background:var(--alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .section__header{ text-align:center; margin-bottom:1.6rem; }
+    .section__header h2{ color:var(--brand); }
+    .section__header .accent{ color:var(--accent); }
+
+    .btn{
+      display:inline-block; border-radius:999px; padding:.75rem 1.1rem; text-decoration:none; font-weight:800;
+      border:2px solid var(--accent); background:var(--accent); color:#fff; transition:.15s ease-in-out;
+    }
+    .btn:hover{ filter:brightness(0.92); }
+    .btn--ghost{ background:transparent; color:var(--accent); }
+    .btn--sm{ padding:.5rem .9rem; font-size:.95rem; }
+    .btn--block{ display:block; text-align:center; width:100%; }
+
+    .lists.two-col{
+      display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .callout{
+      margin-top:1rem; padding:1rem 1.2rem; border-left:4px solid var(--accent);
+      background:#fff; border:1px solid var(--border); box-shadow:var(--shadow); border-radius:10px;
+    }
+
+    .checklist{
+      display:grid; gap:.7rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      list-style:none; padding:0; margin:0;
+    }
+    .checklist li{
+      background:#fff; border:1px solid var(--border); border-radius:10px; padding:.85rem 1rem; box-shadow:var(--shadow);
+      position:relative; padding-left:2.6rem;
+    }
+    .checklist li::before{
+      content:"✔"; position:absolute; left:.9rem; top:50%; transform:translateY(-50%);
+      color:#16a34a; font-weight:800;
+    }
+
+    .pricing{
+      display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .price-card{
+      background:#fff; border:2px solid #1f1f1f; padding:1.2rem; border-radius:var(--radius); box-shadow:var(--shadow); text-align:center;
+    }
+    .price-card--highlight{ border-color:var(--accent); box-shadow:0 10px 34px rgba(225,6,18,.16); }
+    .price{ font-size:2.4rem; margin:.3rem 0 1rem; color:var(--accent); }
+    .price span{ font-size:1.1rem; vertical-align:top; margin-right:.2rem; }
+
+    .contact-grid{
+      display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-bottom:1rem;
+    }
+    .contact-card{ background:#fff; border:1px solid var(--border); border-radius:10px; padding:1rem; box-shadow:var(--shadow); }
+
+    .link{ color:var(--accent); text-decoration:none; font-weight:700; }
+    .link.big{ font-size:1.2rem; }
+    .social{ text-decoration:none; color:#111; border-bottom:2px solid var(--accent); padding-bottom:2px; }
+
+    .form{ max-width:640px; margin-inline:auto; }
+    .form__row{ display:flex; flex-direction:column; gap:.35rem; margin-bottom:1rem; }
+    .form__row--inline{ flex-direction:row; align-items:center; gap:.6rem; }
+    label{ font-weight:700; }
+    input, textarea{
+      width:100%; padding:.85rem 1rem; border:1px solid var(--border); border-radius:10px; font:inherit; background:#fff;
+    }
+    input:focus, textarea:focus{ outline:2px solid #ffb3b8; border-color:#ff8a90; }
+    .checkbox{ display:flex; align-items:center; gap:.5rem; }
+    .error{ color:#b00020; min-height:1.1em; }
+    .form-status{ margin-top:.5rem; color:var(--muted); }
+
+    .site-footer{ border-top:1px solid var(--border); background:#fff; }
+    .footer-inner{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0; }
+    .footer-nav a{ color:var(--muted); text-decoration:none; margin-right:.8rem; }
+    .footer-nav a:hover{ color:var(--accent); }
+
+    @media (max-width: 900px){
+      .hero__grid{ grid-template-columns: 1fr; }
+      .nav__toggle{ display:inline-block; border:1px solid var(--border); background:#fff; padding:.5rem .7rem; border-radius:8px; }
+      .nav__list{
+        display:none; position:absolute; right:4%; top:60px; background:#fff; padding:1rem; border:1px solid var(--border); border-radius:10px; box-shadow:var(--shadow);
+      }
+      .nav__list.show{ display:flex; flex-direction:column; gap:.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="L&D Exceptional Taxes home">
+        <!-- Inline SVG Logo -->
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="L&D logo">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#E10612"/>
+                <stop offset="1" stop-color="#B1050E"/>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="12" fill="url(#g)" />
+            <text x="50%" y="52%" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800" fill="#fff">L&D</text>
+          </svg>
+        </span>
+        <span>L&D Exceptional Taxes, LLC</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+        <ul id="nav-menu" class="nav__list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#pricing">Advances</a></li>
+          <!-- Book Now (email by default; change to Facebook if preferred) -->
+          <li><a href="mailto:exceptionaltaxes@outlook.com" class="btn btn--sm" aria-label="Book now via email">Book Now</a></li>
+          <!-- Alternative:
+          <li><a target="_blank" rel="noopener" href="https://www.facebook.com/share/1738XQ8tYq/?mibextid=wwXIfr" class="btn btn--sm" aria-label="Book now on Facebook">Book Now</a></li>
+          -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--contrast" aria-label="Intro">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <h1><span class="accent">Making your numbers make cents!!</span></h1>
+        <p>W-2s • Self-Employed • Individuals • Small Business. E-file, fast turnaround, and year-round support.</p>
+        <div class="hero__actions">
+          <a class="btn" href="tel:+12295737323">Call (229) 573-7323</a>
+          <a class="btn btn--ghost" href="#contact">Free Consultation</a>
+        </div>
+        <ul class="hero__badges" aria-label="Highlights">
+          <li>✔ IRS e-file</li>
+          <li>✔ Virtual &amp; In-Person</li>
+          <li>✔ Albany, GA</li>
+        </ul>
+      </div>
+      <figure class="hero__media">
+        <!-- Replace src with your hosted hero image if available -->
+        <img src="../images/lashandapic.jpg" alt="Tax professional reviewing documents" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Do you have W-2s? Are you self-employed?</h2>
+          <p>We serve employees and 1099 earners across many trades.</p>
+        </header>
+
+        <div class="lists two-col" aria-label="Industries we serve">
+          <ul>
+            <li>Truck Driver</li>
+            <li>Babysitter</li>
+            <li>Barber</li>
+            <li>Uber/Lyft Driver</li>
+            <li>Lash Tech</li>
+          </ul>
+          <ul>
+            <li>Housekeeper</li>
+            <li>Hairstylist</li>
+            <li>DJ</li>
+            <li>CNA</li>
+            <li>…and more</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <strong>Tax Pro:</strong> <span class="accent">Lashanda</span> — friendly, accurate, and fast.
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist -->
+    <section id="checklist" class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Tax Season Checklist</h2>
+          <p>Bring these items to speed up your filing.</p>
+        </header>
+        <ul class="checklist">
+          <li><span>Photo ID</span></li>
+          <li><span>Social Security</span></li>
+          <li><span>Proof of Address</span></li>
+          <li><span>1099s and/or W-2s</span></li>
+          <li><span>Dependents’ Information</span></li>
+          <li><span>Bank Account Information</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Advances / Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="accent">Up to $7,000 Advance Loans*</h2>
+          <p>*If you qualify. Applications open <strong>January 2, 2025</strong>.</p>
+        </header>
+
+        <div class="pricing">
+          <article class="price-card price-card--highlight" aria-label="Tax Refund Advance">
+            <h3>Tax Refund Advance</h3>
+            <p class="price"><span>$</span>7,000 <small>max</small></p>
+            <ul>
+              <li>Quick decision</li>
+              <li>No impact on tax prep accuracy</li>
+              <li>Subject to lender terms &amp; eligibility</li>
+            </ul>
+            <a href="#contact" class="btn btn--block">Start Your Application</a>
+          </article>
+        </div>
+
+        <p class="disclaimer">*Final eligibility determined by provider; terms and fees may apply.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Book with L&D Exceptional Taxes</h2>
+          <p>Call, message, or visit us in Albany.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Visit</h3>
+            <p>204 North Magnolia St<br>Albany, GA 31707</p>
+            <p>
+              <a class="link" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/search/?api=1&query=204+North+Magnolia+St+Albany+GA+31707"
+                 aria-label="Open directions to 204 North Magnolia St, Albany GA">
+                 Get Directions ↗
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Call/Text</h3>
+            <p>
+              <a class="link big" href="tel:+12295737323" aria-label="Call L and D Exceptional Taxes at 229-573-7323">
+                (229) 573-7323
+              </a>
+            </p>
+            <p>Email:
+              <a class="link" href="mailto:exceptionaltaxes@outlook.com">
+                exceptionaltaxes@outlook.com
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Connect</h3>
+            <p>
+              <a class="social" target="_blank" rel="noopener"
+                 href="https://www.facebook.com/share/1738XQ8tYq/?mibextid=wwXIfr"
+                 aria-label="Open Facebook page">Facebook</a>
+              <!-- Add Instagram when available
+              • <a class="social" target="_blank" rel="noopener" href="#" aria-label="Open Instagram page">Instagram</a>
+              -->
+            </p>
+            <p>Virtual &amp; in-person appointments available.</p>
+          </div>
+        </div>
+
+        <!-- Simple contact form (client-side demo only) -->
+        <form id="contactForm" class="form" novalidate aria-labelledby="contactFormLabel">
+          <h3 id="contactFormLabel" class="visually-hidden" style="position:absolute;left:-9999px;">Contact form</h3>
+
+          <div class="form__row">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" />
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="form__row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" />
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="form__row">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="4" required aria-required="true"
+              placeholder="e.g., W-2 filing, self-employed 1099, advance inquiry"></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="form__row form__row--inline">
+            <label class="checkbox" for="consent">
+              <input type="checkbox" id="consent" name="consent" required aria-required="true" />
+              <span>I agree to the privacy policy.</span>
+            </label>
+          </div>
+
+          <button class="btn" type="submit">Send</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> L&D Exceptional Taxes, LLC. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="mailto:exceptionaltaxes@outlook.com">exceptionaltaxes@outlook.com</a>
+        <a href="tel:+12295737323">(229) 573-7323</a>
+        <a target="_blank" rel="noopener"
+           href="https://www.facebook.com/share/1738XQ8tYq/?mibextid=wwXIfr">Facebook</a>
+        <!-- Optional:
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        -->
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "L&D Exceptional Taxes, LLC",
+    "slogan": "Making your numbers make cents!!",
+    "telephone": "+1-229-573-7323",
+    "email": "exceptionaltaxes@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "204 North Magnolia St",
+      "addressLocality": "Albany",
+      "addressRegion": "GA",
+      "postalCode": "31707",
+      "addressCountry": "US"
+    },
+    "areaServed": "US",
+    "url": "https://ldexceptionaltaxes.com/"
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.querySelector('#nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('show');
+      });
+    }
+
+    // Dynamic year
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Simple form validation + mock submit (replace with your form service)
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    function showError(input, msg) {
+      const small = input.parentElement.querySelector('.error');
+      if (small) { small.textContent = msg || ''; }
+      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    }
+
+    const validEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+    if (form && statusEl) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const { name, email, message, consent } = form;
+        let ok = true;
+
+        if (!name.value.trim()) { showError(name, 'Please enter your name.'); ok = false; } else { showError(name, ''); }
+        if (!validEmail(email.value)) { showError(email, 'Enter a valid email.'); ok = false; } else { showError(email, ''); }
+        if (!message.value.trim()) { showError(message, 'Share a brief message.'); ok = false; } else { showError(message, ''); }
+        if (!consent.checked) { consent.focus(); ok = false; }
+
+        if (!ok) return;
+
+        statusEl.textContent = 'Sending...';
+        await new Promise(r => setTimeout(r, 600)); // simulate network
+        statusEl.textContent = 'Thanks! We’ll reach out within 1 business day.';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
